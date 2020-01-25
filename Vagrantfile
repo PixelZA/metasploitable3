@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     win2k8.winrm.retry_limit = 60
     win2k8.winrm.retry_delay = 10
 
-    win2k8.vm.network "private_network", type: "dhcp"
+    win2k8.vm.network "private_network", ip: '172.28.128.4'
 
     # Configure Firewall to open up vulnerable services
     case ENV['MS3_DIFFICULTY']
